@@ -17,7 +17,7 @@ JSON_FILE = os.path.join(BASE_DIRECTORY, 'data_json.json')
 
 
 data_json = []
-data_csv = "Spécialité, Nom, Prénom, Adresse, Commune, Téléphone\n"
+data_csv = "Specialite, Nom, Prenom, Adresse, Commune, Telephone\n"
 
 req2 = requests.get(url)
 soup2 = BeautifulSoup(req2.text, 'html.parser')
@@ -35,23 +35,31 @@ data = {}
 count = 1
 for doctor in range(doctors):
     print(count)
-    print(field[doctor].text)
+    # print(field[doctor].text)
 
     if count == 1:
-        data["Spécialité"] = field[doctor].text
+        print('specialte = ', field[doctor].text)
+        # data["Specialite"] = field[doctor].text
     elif count == 2:
-        data["Nom"] = field[doctor].text
+        print('nome = ', field[doctor].text)
+        # data["Nom"] = field[doctor].text
     elif count == 3:
-        data["Prénom"] = field[doctor].text
+        print('Prenom = ', field[doctor].text)
+        # data["Prenom"] = field[doctor].text
     elif count == 4:
-        data["Adresse"] = field[doctor].text
+        print('Adresse = ', field[doctor].text)
+        # data["Adresse"] = field[doctor].text
     elif count == 5:
-        data["Commune"] = field[doctor].text
+        print('Commune = ', field[doctor].text)
+        # data["Commune"] = field[doctor].text
     elif count == 6:
-        data["Téléphone"] = field[doctor].text
+        print('Telephone = ', field[doctor].text)
+        # data["Telephone"] = field[doctor].text
 
     count += 1
     if count == 6:
         count = 1
-        data_json.append(data)
-        data.clear()
+        # # data_json.append(data)
+        # # data.clear()
+
+# print('data_json = \n', data_json)
