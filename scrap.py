@@ -60,7 +60,15 @@ for doctor in range(doctors):
 
         count = 0
         print('data = \n', data)
-        data_json.append(data)
+        # data_json.append(data)
+
+        data_json += [{"Specialite": data["Specialite"],
+                       "Nom": data["Nom"],
+                       "Prenom": data["Prenom"],
+                       "Adresse": data["Adresse"],
+                       "Commune": data["Commune"],
+                       "Telephne": data["Telephone"]
+                       }]
         data.clear()
 
 print("data_json = \n", data_json)
