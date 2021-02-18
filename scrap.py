@@ -26,14 +26,16 @@ soup2 = BeautifulSoup(req2.text, 'html.parser')
 table = soup2.find("table", {"class": "tabelle separate"})
 # print(table)
 field = table.findAll("td", {"class": "zelle"})
-print("doctors\n", len(field)//5)
 doctors = len(field)//10
+print("doctors\n", doctors)
 
 data = {}
 
 
-count = 1
+count = 0
 for doctor in range(doctors):
+    count += 1
+
     print(count)
     # print(field[doctor].text)
 
@@ -56,8 +58,9 @@ for doctor in range(doctors):
         # print('Telephone = ', field[doctor].text)
         data["Telephone"] = field[doctor].text
 
-    count += 1
-    if count > 6:
-        count = 1
+        count = 0
         print('data = \n', data)
+        data_json.append(data)
         data.clear()
+
+print("data_json = \n", data_json)
