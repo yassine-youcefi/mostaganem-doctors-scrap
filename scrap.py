@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
 import requests
-# import pretty_csv
 import json
 import os
 from bs4 import BeautifulSoup
@@ -45,7 +44,7 @@ count = 0
 for doctor in range(doctors):
     count += 1
 
-    # print(count)
+    print(count)
     # print(field[doctor].text)
 
     if count == 1:
@@ -88,6 +87,6 @@ for doctor in range(doctors):
 with open(JSON_FILE, 'w') as json_f:
     json_f.write(json.dumps(data_json, indent=4)+'\n')
 
-# save in files
+# # save in files
 with open(CSV_FILE, 'w') as csv_f:
     csv_f.write(data_csv)
