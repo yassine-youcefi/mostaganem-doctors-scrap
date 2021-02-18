@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
 import requests
+# import pretty_csv
 import json
 import os
 from bs4 import BeautifulSoup
@@ -31,12 +32,20 @@ print("doctors\n", doctors)
 
 data = {}
 
+chars = {
+    "\u00a0": "  ",  # no break space
+    "\u00fc": "ü",
+    "\u00e9": "é",
+    "\u00b0": "-",
+    "\u00e8": "è"
+}
+
 
 count = 0
 for doctor in range(doctors):
     count += 1
 
-    print(count)
+    # print(count)
     # print(field[doctor].text)
 
     if count == 1:
@@ -59,8 +68,7 @@ for doctor in range(doctors):
         data["Telephone"] = field[doctor].text
 
         count = 0
-        print('data = \n', data)
-        # data_json.append(data)
+        # print('data = \n', data)
 
         data_json += [{"Specialite": data["Specialite"],
                        "Nom": data["Nom"],
@@ -69,9 +77,17 @@ for doctor in range(doctors):
                        "Commune": data["Commune"],
                        "Telephne": data["Telephone"]
                        }]
+
+        data_csv = data_csv + "{},{},{},{},{},{}\n".format(
+            data["Specialite"], data["Nom"], data["Prenom"], data["Adresse"], data["Commune"], data["Telephone"].replace(
+                ',', '.'),
+        )
         data.clear()
 
-print("data_json = \n", data_json)
 
 with open(JSON_FILE, 'w') as json_f:
     json_f.write(json.dumps(data_json, indent=4)+'\n')
+
+# save in files
+with open(CSV_FILE, 'w') as csv_f:
+    csv_f.write(data_csv)
