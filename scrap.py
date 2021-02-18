@@ -72,3 +72,6 @@ for doctor in range(doctors):
         data.clear()
 
 print("data_json = \n", data_json)
+
+with open(JSON_FILE, 'w') as json_f:
+    json_f.write(json.dumps(data_json, indent=4)+'\n')

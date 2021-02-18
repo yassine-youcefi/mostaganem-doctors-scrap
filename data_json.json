@@ -1,0 +1,130 @@
+[
+    {
+        "Specialite": "Anapath",
+        "Nom": "BILAKDAR",
+        "Prenom": "Dalila Zaza",
+        "Adresse": "Gare routi\u00e8re,Route d'Oran",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "(045).30.83.72"
+    },
+    {
+        "Specialite": "Anapath",
+        "Nom": "TAKARLI",
+        "Prenom": "Ibtissem",
+        "Adresse": "Cit\u00e9 160 logements BT B n\u00b032 1er \u00e9tage",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "\u00a0"
+    },
+    {
+        "Specialite": "Anesth\u00e9sie R\u00e9animation",
+        "Nom": "BOUDERBALA",
+        "Prenom": "MALIKA NAWEL",
+        "Adresse": "CITE 400 LOGEMENTS ROUTE D'ORAN",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "(045).21.71.41"
+    },
+    {
+        "Specialite": "Anesth\u00e9sie R\u00e9animation",
+        "Nom": "FARSI",
+        "Prenom": "Mohamed",
+        "Adresse": "Cit\u00e9 32 Logements BT A n\u00b02 Ain Tedeles",
+        "Commune": "Ain Tedeles",
+        "Telephne": "\u00a0"
+    },
+    {
+        "Specialite": "Cardiologie",
+        "Nom": "AMAMRA",
+        "Prenom": "Nac\u00e9ra",
+        "Adresse": "Cit\u00e9 320 logts BT 24 N\u00b001 Chemouma",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "(045).21.30.15"
+    },
+    {
+        "Specialite": "Cardiologie",
+        "Nom": "BOURAHLA",
+        "Prenom": "Belahouel",
+        "Adresse": "Rue Tedlaouti Ghali N\u00b009, cit\u00e9 Nigrel",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "\u00a0"
+    },
+    {
+        "Specialite": "Cardiologie",
+        "Nom": "MOHAMED",
+        "Prenom": "WAHIBA",
+        "Adresse": "Cit\u00e9 800 LOGEMENTS BT M 1 - N\u00b0433 - 1er \u00e9tage, Tigditt",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "(045).39.33.98"
+    },
+    {
+        "Specialite": "Cardiologie",
+        "Nom": "REMILI",
+        "Prenom": "ABDELHAK",
+        "Adresse": "Angle Rue Kara Mustapha et Benguettat",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "\u00a0"
+    },
+    {
+        "Specialite": "Cardiologie",
+        "Nom": "TOUAIBIA",
+        "Prenom": "Ahmed RIAD",
+        "Adresse": "Cit\u00e9 5 Juillet 62 Bt A 98 N\u00b010",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "\u00a0"
+    },
+    {
+        "Specialite": "Cardiologie",
+        "Nom": "BOUDIA",
+        "Prenom": "Fatima Zohra",
+        "Adresse": "Rue Berrais Abderahmane N\u00b022",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "\u00a0"
+    },
+    {
+        "Specialite": "Cardiologie",
+        "Nom": "CHOUARFIA",
+        "Prenom": "Houari",
+        "Adresse": "Rue Hassi Mameche n\u00b056 Mazagran",
+        "Commune": "MAZAGRAN",
+        "Telephne": "\u00a0"
+    },
+    {
+        "Specialite": "Cardiologie",
+        "Nom": "BEZA\u00cfT",
+        "Prenom": "Mohamed",
+        "Adresse": "Sidi Ali",
+        "Commune": "SIDI ALI",
+        "Telephne": "\u00a0"
+    },
+    {
+        "Specialite": "Cardiologie",
+        "Nom": "SETTACHE",
+        "Prenom": "Nac\u00e9ra",
+        "Adresse": "Cit\u00e9 des 570 Logts Bloc 10 n\u00b01 Cit\u00e9 CNEP",
+        "Commune": "Mostaganem",
+        "Telephne": "(045) 42.28.52"
+    },
+    {
+        "Specialite": "Chirurgie G\u00e9n\u00e9rale",
+        "Nom": "BENDIAB",
+        "Prenom": "Sidi Med Amine",
+        "Adresse": "Cit\u00e9 5 Juillet 62 Batiment B107 N\u00b004",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "\u00a0"
+    },
+    {
+        "Specialite": "Chirurgie G\u00e9n\u00e9rale",
+        "Nom": "EL MASCRI",
+        "Prenom": "Mokhtar",
+        "Adresse": "Nouvelle CIA BT A n\u00b03 Zone d'Habitation urbaine",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "(045).26.45.23"
+    },
+    {
+        "Specialite": "Chirurgie G\u00e9n\u00e9rale",
+        "Nom": "AMAR GUELLAT",
+        "Prenom": "MOHAMED DJILLALI",
+        "Adresse": "12 RUE BENKADA TAYEB AVENUE RAYNAL",
+        "Commune": "MOSTAGANEM",
+        "Telephne": "\u00a0"
+    }
+]
