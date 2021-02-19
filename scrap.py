@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
+import csv
 import requests
 import json
 import os
@@ -17,7 +18,7 @@ JSON_FILE = os.path.join(BASE_DIRECTORY, 'data_json.json')
 
 
 data_json = []
-data_csv = "Specialite, Nom, Prenom, Adresse, Commune, Telephone\n"
+data_csv = "Specialite, Nom, Prenom, Adresse, Commune, Telephone"
 
 req2 = requests.get(url)
 soup2 = BeautifulSoup(req2.text, 'html.parser')
@@ -26,7 +27,8 @@ soup2 = BeautifulSoup(req2.text, 'html.parser')
 table = soup2.find("table", {"class": "tabelle separate"})
 # print(table)
 field = table.findAll("td", {"class": "zelle"})
-doctors = len(field)//10
+
+doctors = len(field)
 print("doctors\n", doctors)
 
 data = {}
@@ -44,7 +46,7 @@ count = 0
 for doctor in range(doctors):
     count += 1
 
-    print(count)
+    # print(count)
     # print(field[doctor].text)
 
     if count == 1:
@@ -67,26 +69,31 @@ for doctor in range(doctors):
         data["Telephone"] = field[doctor].text
 
         count = 0
-        # print('data = \n', data)
+        print('data = \n', data)
 
         data_json += [{"Specialite": data["Specialite"],
                        "Nom": data["Nom"],
                        "Prenom": data["Prenom"],
                        "Adresse": data["Adresse"],
                        "Commune": data["Commune"],
-                       "Telephne": data["Telephone"]
+                       "Telephone": data["Telephone"]
                        }]
 
         data_csv = data_csv + "{},{},{},{},{},{}\n".format(
             data["Specialite"], data["Nom"], data["Prenom"], data["Adresse"], data["Commune"], data["Telephone"].replace(
                 ',', '.'),
         )
+        # with open('data_csv2.csv', 'w') as user_info_csv:
+        #     writer = csv.DictWriter(
+        #         user_info_csv, fieldnames=["Specialite", "Nom", "Prenom", "Adresse", "Commune", "Telephone"], delimiter=';')
+        #     writer.writerow(data)
+
         data.clear()
 
 
 with open(JSON_FILE, 'w') as json_f:
     json_f.write(json.dumps(data_json, indent=4)+'\n')
 
-# # save in files
+# save in files
 with open(CSV_FILE, 'w') as csv_f:
     csv_f.write(data_csv)
